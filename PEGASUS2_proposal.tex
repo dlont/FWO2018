@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{slashed}
+\usepackage{graphicx}
+
+\usepackage{pgfgantt}
+%\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{rotating}
+
+% geometry
+\usepackage[margin=0.5in]{geometry}
+
+% bibliography sorting
+\usepackage{natbib}
+
+% math boldface
+\usepackage{bm}
+
+% xspace
+\usepackage{xspace}
+
+% Line numberring
+\usepackage{lineno}
+
+% HyperReferences
+\usepackage{hyperref}
+
+% Export Helvetica Fonts
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+%Switch line numbers
+%\linenumbers
+
+\include{definitions}
+
+\begin{document}
+\begin{center}
+\textbf{\textit{{\Large Indicate the state-of-the-art.}}}\\
+\end{center}
+\input{sections/state_of_the_art}
+
+
+\begin{center}
+\textbf{\textit{{\Large Describe the objectives of the research.}}}\\
+\end{center}
+\input{sections/objectives}
+
+\begin{center}
+\textbf{\textit{{\Large Describe the methodology of your research.}}}\\
+\end{center}
+\input{sections/methodology}
+
+\begin{center}
+\textbf{\textit{{\Large Provide a work plan, i.e. the different work packages (WPs) and a detailed timetable.}}}\\
+\end{center}
+\input{sections/timeplan}
+
+\newpage
+\begin{center}
+\textbf{\textit{{\Large Indicate below whether you think the results of the proposed research will be suitable to be communicated to a non-expert audience and how you would undertake such communication.}}}\\
+\end{center}
+
+\input{dissemination}
+%\begin{thebibliography}{9}
+%\input{sections/references}
+%\end{thebibliography}
+\bibliographystyle{unsrt}
+\bibliography{sections/references.bib}
+
+\newpage
+\input{sections/mypublist}
+
+%\newpage
+%\input{sections/curie}
+\end{document}

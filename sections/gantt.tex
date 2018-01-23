@@ -1,0 +1,84 @@
+\begin{sidewaysfigure}[p!]
+     \begin{ganttchart}[%Specs
+             y unit title=0.5cm,
+             y unit chart=0.5cm,
+             vgrid,hgrid,
+             title height=1,
+             title label font=\bfseries\footnotesize,
+             bar/.style={fill=blue},
+             bar height=0.7,
+             group right shift=0,
+             group top shift=0.7,
+             group height=.1,
+             group peaks width={0.2},
+             inline]{1}{36}
+            %labels
+            \ganttset{group/.append style={orange},
+            milestone/.append style={red},
+            progress label node anchor/.append style={text=red}}
+            \ganttset{progress label text={}, link/.style={black, -to}}
+            \gantttitle{BSM searches in events with four top quark signature at $\sqrt{s}=13/14$ TeV at the LHC}{36}\\  % title 1
+            \gantttitle[]{2017}{3}                 % title 2
+            \gantttitle[]{2018}{12}
+            \gantttitle[]{2019}{12}
+            \gantttitle[]{2020}{9}  \\              
+            \gantttitle{Q4}{3}                      % title 3
+            \gantttitle{Q1}{3}
+            \gantttitle{Q2}{3}
+            \gantttitle{Q3}{3}
+            \gantttitle{Q4}{3}
+            \gantttitle{Q1}{3}
+            \gantttitle{Q2}{3}
+            \gantttitle{Q3}{3}
+            \gantttitle{Q4}{3}
+            \gantttitle{Q1}{3}
+            \gantttitle{Q2}{3}
+            \gantttitle{Q3}{3}\\
+            \ganttnewline
+            % WP1
+            \ganttgroup[group/.append style={fill=blue}]{\hspace{1ex}Event selection (WP1)}{1}{6}\\
+            \ganttbar[progress=100,inline=false,bar/.append style={fill=green}]{\parbox[c][1ex][c]{0.12\textwidth}{Trigger chain} }{1}{6}\\
+%            \ganttbar[progress=100,inline=false,bar/.append style={fill=orange}]{\parbox[c][1ex][c]{0.12\textwidth}{$b$-tagging}}{1}{15}\\
+			\ganttnewline
+        	% WP2
+        	\ganttgroup[group/.append style={fill=blue}]{Measurement of the SM \fourtop cross section (WP2)}{3}{18} \\
+        	\ganttbar[progress=100,inline=false,bar/.append style={fill=green}]{$l$+jets channel}{3}{13} \\
+        	\ganttbar[progress=100,inline=false,bar/.append style={fill=green},name=ljetsm]{$ll$+jets channel}{7}{18} \\
+        	\ganttbar[progress=100,inline=false,bar/.append style={fill=orange},name=alljetsm]{all jets channel}{9}{18} \\   
+        	\ganttnewline
+        	% WP3
+        	\ganttgroup[group/.append style={fill=blue}]{\hspace{1ex}Event reconstruction and top tagging (WP3)}{12}{23}\\
+        	\ganttbar[progress=100,inline=false,bar/.append style={fill=orange}]{\parbox[c][1ex][c]{0.12\textwidth}{top-tagging}}{12}{23}\\
+        	\ganttnewline
+            % WP4
+			\ganttgroup[group/.append style={fill=blue}]{Direct BSM searches (WP4)}{12}{30} \\
+            \ganttbar[progress=100,inline=false,bar/.append style={fill=red}]{$l$+jets channel}{12}{23} \\
+            \ganttbar[progress=100,inline=false,bar/.append style={fill=red},name=ljets]{$ll$+jets channel}{16}{27} \\
+            \ganttbar[progress=100,inline=false,bar/.append style={fill=red},name=alljets]{all jets channel}{20}{30}  \\   
+            \ganttnewline
+        	% WP5
+            \ganttgroup[group/.append style={fill=blue}]{Combination and interpretation (WP5)}{23}{36} \\
+%            \ganttbar[progress=100,inline=false,bar/.append style={fill=green},name=comb1]{}{15}{18}
+            \ganttbar[progress=100,inline=false,bar/.append style={fill=green},name=comb2]{%
+            \parbox[c][1ex][c]{0.14\textwidth}{Results combination}}{23}{29} \\
+%   	        \ganttlink[link mid=.159]{alljets}{comb}
+%            \ganttlink[link mid=.4]{ljets}{comb}
+%			\ganttbar[progress=100,inline=false,bar/.append style={fill=green}]{}{17}{20}
+            \ganttbar[progress=100,inline=false,bar/.append style={fill=green}]{%
+            \parbox[c][1ex][c]{0.14\textwidth}{SMF Interpretation}}{26}{36} \\
+%            \ganttbar[progress=100,inline=false,bar/.append style={fill=orange}]{}{17}{20}
+            \ganttbar[progress=100,inline=false,bar/.append style={fill=orange}]{\parbox[c][1ex][c]{0.14\textwidth}{EFTF Interpretation}}{26}{36}
+              
+              % Legend
+%              \draw [fill=white] (10.7,-1.7) rectangle (16.5,-3.9);
+              \draw [fill=white] (10.7,-1.7) rectangle (16.5,-3.8);
+              \node [fill=white,anchor=west] at (12.7,-2.15) {Low risk};
+              \draw [fill=green] (11.1,-2.1) rectangle (12.5,-2.3);
+              \node [fill=white,anchor=west] at (12.7,-2.75) {Medium risk};
+              \draw [fill=orange] (11.1,-2.7) rectangle (12.5,-2.9);
+              \node [fill=white,anchor=west] at (12.7,-3.45) {High risk};
+              \draw [fill=red] (11.1,-3.3) rectangle (12.5,-3.5);
+        \end{ganttchart}
+        \caption{Time-line of the proposed project. Each year of the fellowship mandate is divided into intervals of three months (Q1-4). The extend of the color bands indicates the start and the end of corresponding task, while their color encodes the risk estimate. In this figure, SMF --- simplified model framework; EFTF --- effective field theory framework.}
+        \label{fig:gantt}
+\end{sidewaysfigure}
